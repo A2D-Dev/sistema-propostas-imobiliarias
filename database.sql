@@ -9,7 +9,7 @@
 CREATE TABLE cliente (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(150) NOT NULL,
-    cpf VARCHAR(11) NOT NULL,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
     email VARCHAR(150),
     telefone VARCHAR(20),
     data_cadastro TIMESTAMP NOT NULL DEFAULT NOW()
@@ -32,7 +32,7 @@ CREATE TABLE unidade (
 -- =========================
 CREATE TABLE status_proposta (
     id SERIAL PRIMARY KEY,
-    nome VARCHAR(50) NOT NULL
+    nome VARCHAR(50) NOT NULL UNIQUE
 );
 
 -- =========================
