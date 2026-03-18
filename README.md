@@ -25,7 +25,7 @@ Simular o fluxo de propostas imobiliárias, incluindo:
 
 ---
 
-### 🧩 Diagrama do Banco de Dados
+## 🧩 Diagrama do Banco de Dados
 
 Representação das tabelas e seus relacionamentos (chaves estrangeiras).
 
