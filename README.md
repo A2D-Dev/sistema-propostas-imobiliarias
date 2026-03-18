@@ -66,3 +66,10 @@ Este projeto consolidou na prática:
 - Resolução de erro real de integridade (Foreign Key)
 
 ---
+
+## ▶️ Como executar o projeto
+
+1. Criar o banco de dados no PostgreSQL
+2. Executar o script `database.sql`
+3. Inserir dados nas tabelas
+4. Executar consultas com JOIN para visualizar os dados
