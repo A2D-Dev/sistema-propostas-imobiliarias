@@ -1,6 +1,6 @@
 # 🏢 Sistema de Propostas Imobiliárias
 
-Projeto desenvolvido como parte do meu aprendizado em desenvolvimento de software, com foco em banco de dados e lógica de negócio do mercado imobiliário.
+Projeto desenvolvido como parte da minha transição para a área de desenvolvimento, aplicando conceitos de banco de dados com foco em problemas reais do mercado imobiliário.
 
 ---
 
@@ -50,3 +50,18 @@ FROM proposta p
 JOIN cliente c ON p.cliente_id = c.id
 JOIN unidade u ON p.unidade_id = u.id
 JOIN status_proposta s ON p.status_id = s.id;
+---
+
+## 📈 Aprendizados
+
+Este projeto consolidou na prática:
+
+- Criação de tabelas com SQL (CREATE TABLE)
+- Definição de chaves primárias (PRIMARY KEY)
+- Relacionamento entre tabelas (FOREIGN KEY)
+- Tratamento de dados obrigatórios (NOT NULL)
+- Uso de valores padrão (DEFAULT / NOW())
+- Execução de consultas com múltiplas tabelas (JOIN)
+- Resolução de erro real de integridade (Foreign Key)
+
+---
