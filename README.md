@@ -112,3 +112,11 @@ Representação das tabelas e seus relacionamentos (chaves estrangeiras).
 - DEFAULT (Valor padrão)
 - JOIN (Junção de tabelas)
 - Data Integrity (Integridade de dados)
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **A2D-Dev**
+
+Em transição para desenvolvimento com foco em soluções reais para o mercado imobiliário.
