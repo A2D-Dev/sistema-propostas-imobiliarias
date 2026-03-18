@@ -66,7 +66,7 @@ Este projeto consolidou na prática:
 - Resolução de erro real de integridade (Foreign Key)
 
 ---
-
+```
 ## ▶️ Como executar o projeto
 
 1. Criar o banco de dados no PostgreSQL
