@@ -45,16 +45,35 @@ O foco atual está na modelagem de dados e estruturação da base do sistema, co
 
 ## 🗄️ Banco de Dados
 
-O banco foi modelado com foco em simplicidade e representação de um cenário real de propostas imobiliárias.
+O banco foi modelado com foco em representar o fluxo de propostas imobiliárias.
 
-Entidades principais:
+Estrutura baseada nas entidades:
 
 - Cliente
 - Unidade
 - Proposta
 - StatusProposta
 
-O objetivo é manter uma estrutura limpa e escalável para evolução futura.
+Relacionamentos definidos para garantir integridade e organização dos dados.
+
+---
+
+## 🔄 Fluxo da Proposta
+
+1. Cliente é cadastrado
+2. Unidade é selecionada
+3. Proposta é criada
+4. Status da proposta é atualizado conforme andamento
+
+Este fluxo representa um cenário simplificado do processo real do mercado imobiliário.
+
+---
+
+## 🚧 Evolução futura
+
+- API em C# com ASP.NET Core
+- Integração com frontend (Angular)
+- Regras de negócio aplicadas no backend
 
 ---
 
