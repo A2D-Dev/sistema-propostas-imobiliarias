@@ -1,7 +1,7 @@
 
-# 🏢 <A2D-Dev /> Sistema de Propostas Imobiliárias
+# 🏢  `<A2D-Dev />` Sistema de Propostas Imobiliárias
 
-Projeto desenvolvido como parte da minha transição para a área de desenvolvimento, aplicando conceitos de banco de dados com foco em problemas reais do mercado imobiliário.
+Projeto desenvolvido como parte da transição para a área de desenvolvimento, com foco na aplicação de conceitos de banco de dados em cenários reais do mercado imobiliário.
 
 ---
 
