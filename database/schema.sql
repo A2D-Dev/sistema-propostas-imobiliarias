@@ -5,12 +5,26 @@
 -- ========================================
 
 -- =========================
+-- DROP (RESET DO BANCO)
+-- =========================
+DROP TABLE IF EXISTS proposta;
+DROP TABLE IF EXISTS status_proposta;
+DROP TABLE IF EXISTS unidade;
+DROP TABLE IF EXISTS cliente;
+
+-- =========================
 -- TABELA CLIENTE
 -- =========================
 CREATE TABLE cliente (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(150) NOT NULL,
-    cpf VARCHAR(11) NOT NULL UNIQUE CHECK (cpf ~ '^[0-9]{11}$'),
+
+    -- CPF ou CNPJ (já preparado para alfanumérico futuro)
+    documento VARCHAR(20) NOT NULL UNIQUE,
+
+    -- PF = Pessoa Física | PJ = Pessoa Jurídica
+    tipo_pessoa CHAR(2) NOT NULL CHECK (tipo_pessoa IN ('PF', 'PJ')),
+
     email VARCHAR(150),
     telefone VARCHAR(20),
     data_cadastro TIMESTAMP NOT NULL DEFAULT NOW()
