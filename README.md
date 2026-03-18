@@ -56,6 +56,10 @@ Estrutura baseada nas entidades:
 
 Relacionamentos definidos para garantir integridade e organização dos dados.
 
+## 📊 Diagrama do Banco de Dados
+
+![Diagrama](./docs/diagrama.png)
+
 ---
 
 ## 🔄 Fluxo da Proposta
