@@ -22,6 +22,7 @@ Simular o fluxo de propostas imobiliárias, incluindo:
 - unidade
 - status_proposta
 - proposta
+<img width="397" height="551" alt="image" src="https://github.com/user-attachments/assets/410e9993-fa62-47f2-9992-2cbc301314cd" />
 
 ---
 
