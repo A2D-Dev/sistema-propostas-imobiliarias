@@ -16,6 +16,14 @@ Projeto focado em prática de desenvolvimento, modelagem de dados e estruturaç�
 
 ---
 
+## 🧠 Visão do Sistema
+
+Este sistema representa uma etapa inicial de uma aplicação completa para gestão de propostas imobiliárias.
+
+O foco atual está na modelagem de dados e estruturação da base do sistema, com evolução futura para backend e frontend.
+
+---
+
 ## 🚀 Tecnologias utilizadas
 
 - C#
