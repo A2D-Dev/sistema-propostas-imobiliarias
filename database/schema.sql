@@ -1,15 +1,16 @@
 -- ========================================
 -- Sistema de Propostas Imobiliárias
--- Autor: Anderson Dias (A2D Dev)
+-- Autor: Anderson Dias (A2D-Dev)
 -- Descrição: Estrutura de banco de dados
 -- ========================================
+
 -- =========================
 -- TABELA CLIENTE
 -- =========================
 CREATE TABLE cliente (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(150) NOT NULL,
-    cpf VARCHAR(11) NOT NULL UNIQUE,
+    cpf VARCHAR(11) NOT NULL UNIQUE CHECK (cpf ~ '^[0-9]{11}$'),
     email VARCHAR(150),
     telefone VARCHAR(20),
     data_cadastro TIMESTAMP NOT NULL DEFAULT NOW()
@@ -28,7 +29,7 @@ CREATE TABLE unidade (
 );
 
 -- =========================
--- TABELA STATUS
+-- TABELA STATUS PROPOSTA
 -- =========================
 CREATE TABLE status_proposta (
     id SERIAL PRIMARY KEY,
@@ -46,12 +47,36 @@ CREATE TABLE proposta (
     valor_proposta DECIMAL(18,2) NOT NULL,
     data_proposta TIMESTAMP NOT NULL DEFAULT NOW(),
 
-    CONSTRAINT fk_proposta_cliente
-        FOREIGN KEY (cliente_id) REFERENCES cliente(id),
+    CONSTRAINT fk_proposta_cliente_id
+        FOREIGN KEY (cliente_id)
+        REFERENCES cliente(id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE,
 
-    CONSTRAINT fk_proposta_unidade
-        FOREIGN KEY (unidade_id) REFERENCES unidade(id),
+    CONSTRAINT fk_proposta_unidade_id
+        FOREIGN KEY (unidade_id)
+        REFERENCES unidade(id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE,
 
-    CONSTRAINT fk_proposta_status
-        FOREIGN KEY (status_id) REFERENCES status_proposta(id)
+    CONSTRAINT fk_proposta_status_id
+        FOREIGN KEY (status_id)
+        REFERENCES status_proposta(id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE
 );
+
+-- =========================
+-- DADOS INICIAIS (STATUS)
+-- =========================
+INSERT INTO status_proposta (nome) VALUES
+('Em análise'),
+('Aprovada'),
+('Reprovada'),
+('Cancelada');
+
+-- =========================
+-- ÍNDICES (PERFORMANCE)
+-- =========================
+CREATE INDEX idx_proposta_cliente ON proposta(cliente_id);
+CREATE INDEX idx_proposta_unidade ON proposta(unidade_id);
