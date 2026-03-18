@@ -7,10 +7,10 @@
 -- =========================
 -- DROP (RESET DO BANCO)
 -- =========================
-DROP TABLE IF EXISTS proposta;
-DROP TABLE IF EXISTS status_proposta;
-DROP TABLE IF EXISTS unidade;
-DROP TABLE IF EXISTS cliente;
+DROP TABLE IF EXISTS proposta CASCADE;
+DROP TABLE IF EXISTS unidade CASCADE;
+DROP TABLE IF EXISTS cliente CASCADE;
+DROP TABLE IF EXISTS status_proposta CASCADE;
 
 -- =========================
 -- TABELA CLIENTE
@@ -39,7 +39,9 @@ CREATE TABLE unidade (
     bloco VARCHAR(50),
     numero VARCHAR(20) NOT NULL,
     valor DECIMAL(18,2) NOT NULL,
-    data_cadastro TIMESTAMP NOT NULL DEFAULT NOW()
+    data_cadastro TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT NOW(),
+    
+    CONSTRAINT uq_unidade UNIQUE (empreendimento, bloco, numero)
 );
 
 -- =========================
@@ -59,7 +61,7 @@ CREATE TABLE proposta (
     unidade_id INT NOT NULL,
     status_id INT NOT NULL,
     valor_proposta DECIMAL(18,2) NOT NULL,
-    data_proposta TIMESTAMP NOT NULL DEFAULT NOW(),
+    data_proposta TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT NOW(),
 
     CONSTRAINT fk_proposta_cliente_id
         FOREIGN KEY (cliente_id)
@@ -92,5 +94,6 @@ INSERT INTO status_proposta (nome) VALUES
 -- =========================
 -- ÍNDICES (PERFORMANCE)
 -- =========================
-CREATE INDEX idx_proposta_cliente ON proposta(cliente_id);
-CREATE INDEX idx_proposta_unidade ON proposta(unidade_id);
+CREATE INDEX idx_proposta_cliente_id ON proposta(cliente_id);
+CREATE INDEX idx_proposta_unidade_id ON proposta(unidade_id);
+CREATE INDEX idx_proposta_status_id ON proposta(status_id);
