@@ -18,9 +18,11 @@ Projeto focado em prática de desenvolvimento, modelagem de dados e estruturaç�
 
 ## 🧠 Visão do Sistema
 
-Este sistema representa uma etapa inicial de uma aplicação completa para gestão de propostas imobiliárias.
+Este projeto representa a base de um sistema completo de gestão de propostas imobiliárias.
 
-O foco atual está na modelagem de dados e estruturação da base do sistema, com evolução futura para backend e frontend.
+O foco atual está na modelagem de dados e estruturação do banco, com evolução futura para backend e frontend.
+
+A proposta é evoluir este projeto para uma aplicação real utilizando C#, ASP.NET Core e Angular.
 
 ---
 
@@ -69,9 +71,7 @@ Relacionamentos definidos para garantir integridade e organização dos dados.
 3. Proposta é criada
 4. Status da proposta é atualizado conforme andamento
 
-Este fluxo representa um cenário simplificado do processo real do mercado imobiliário.
-
----
+Este fluxo representa uma versão simplificada do processo real do mercado imobiliário.
 
 ## 🚧 Evolução futura
 
