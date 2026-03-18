@@ -27,13 +27,13 @@ Simular o fluxo de propostas imobiliárias, incluindo:
 
 ## 🧠 Conceitos aplicados
 
-- CREATE TABLE
-- PRIMARY KEY
-- FOREIGN KEY
-- NOT NULL
-- DEFAULT
-- JOIN
-- Integridade de dados
+- CREATE TABLE (Criar tabela)
+- PRIMARY KEY (Chave primária)
+- FOREIGN KEY (Chave estrangeira)
+- NOT NULL (Não nulo / obrigatório)
+- DEFAULT (Valor padrão)
+- JOIN (Junção de tabelas)
+- Data Integrity (Integridade de dados)
 
 ---
 
