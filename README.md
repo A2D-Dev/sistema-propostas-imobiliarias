@@ -1,5 +1,5 @@
+# 🏢 `<A2D-Dev />`
 
-# 🏢  `<A2D-Dev />` 
 ## Sistema de Propostas Imobiliárias
 
 Projeto desenvolvido como parte da transição para a área de desenvolvimento, com foco na aplicação de conceitos de banco de dados em cenários reais do mercado imobiliário.
@@ -8,11 +8,9 @@ Projeto desenvolvido como parte da transição para a área de desenvolvimento, 
 
 ## 📌 Sobre o projeto
 
-Este projeto é uma aplicação para gestão de propostas imobiliárias, desenvolvida como parte do portfólio A2D-Dev.
+Este projeto simula um fluxo real de gestão de propostas imobiliárias, permitindo o cadastro e acompanhamento de propostas de forma simples e organizada.
 
-O objetivo é simular um fluxo real do mercado imobiliário, permitindo o cadastro e acompanhamento de propostas de forma simples e organizada.
-
-Projeto focado em prática de desenvolvimento, modelagem de dados e estruturação de sistemas reais.
+Foco em prática de desenvolvimento, modelagem de dados e estruturação de sistemas reais.
 
 ---
 
@@ -22,45 +20,25 @@ Este projeto representa a base de um sistema completo de gestão de propostas im
 
 O foco atual está na modelagem de dados e estruturação do banco, com evolução futura para backend e frontend.
 
-A proposta é evoluir este projeto para uma aplicação real utilizando C#, ASP.NET Core e Angular.
-
 ---
 
 ## 🚀 Tecnologias utilizadas
 
-- C#
-- ASP.NET (futuro)
-- PostgreSQL
-- SQL
-- DBeaver
+* PostgreSQL
+* SQL
+* DBeaver
+* C# (em evolução)
+* ASP.NET Core (em evolução)
+* Angular (em evolução)
 
 ---
 
 ## 🧩 Funcionalidades
 
-- Cadastro de clientes
-- Cadastro de unidades
-- Cadastro de propostas
-- Controle de status da proposta
-
----
-
-## 🗄️ Banco de Dados
-
-O banco foi modelado com foco em representar o fluxo de propostas imobiliárias.
-
-Estrutura baseada nas entidades:
-
-- Cliente
-- Unidade
-- Proposta
-- StatusProposta
-
-Relacionamentos definidos para garantir integridade e organização dos dados.
-
-## 📊 Diagrama do Banco de Dados
-
-![Diagrama](./docs/diagrama.png)
+* Cadastro de clientes
+* Cadastro de unidades
+* Cadastro de propostas
+* Controle de status da proposta
 
 ---
 
@@ -73,20 +51,38 @@ Relacionamentos definidos para garantir integridade e organização dos dados.
 
 Este fluxo representa uma versão simplificada do processo real do mercado imobiliário.
 
-## 🚧 Evolução futura
+---
 
-- API em C# com ASP.NET Core
-- Integração com frontend (Angular)
-- Regras de negócio aplicadas no backend
+## 🗄️ Banco de Dados
+
+Entidades principais:
+
+* Cliente
+* Unidade
+* Proposta
+* StatusProposta
+
+Relacionamentos definidos para garantir integridade e organização dos dados.
+
+---
+
+## 📊 Diagrama do Banco de Dados
+
+![Diagrama](./docs/diagrama.png)
 
 ---
 
 ## ▶️ Como executar o projeto
 
 1. Criar o banco de dados no PostgreSQL
-2. Executar o script `database.sql`
+2. Executar o script:
+
+```sql
+-- ./database/schema.sql
+```
+
 3. Inserir dados nas tabelas
-4. Executar consultas com JOIN para visualizar os dados
+4. Executar consultas para validação:
 
 ```sql
 SELECT 
@@ -99,51 +95,27 @@ FROM proposta p
 JOIN cliente c ON p.cliente_id = c.id
 JOIN unidade u ON p.unidade_id = u.id
 JOIN status_proposta s ON p.status_id = s.id;
----
-
-## 📈 Aprendizados
-
-Este projeto consolidou na prática:
-
-- Criação de tabelas com SQL (CREATE TABLE)
-- Definição de chaves primárias (PRIMARY KEY)
-- Relacionamento entre tabelas (FOREIGN KEY)
-- Tratamento de dados obrigatórios (NOT NULL)
-- Uso de valores padrão (DEFAULT / NOW())
-- Execução de consultas com múltiplas tabelas (JOIN)
-- Resolução de erro real de integridade (Foreign Key)
-
----
 ```
 
 ---
 
-## 🧱 Estrutura do Banco
+## 🚧 Evolução futura
 
-- cliente
-- unidade
-- status_proposta
-- proposta
-
----
-
-## 🧩 Diagrama do Banco de Dados
-
-Representação das tabelas e seus relacionamentos (chaves estrangeiras).
-
-<img width="397" height="551" alt="image" src="https://github.com/user-attachments/assets/410e9993-fa62-47f2-9992-2cbc301314cd" />
+* API em C# com ASP.NET Core
+* Regras de negócio no backend
+* Interface com Angular
 
 ---
 
-## 🧠 Conceitos aplicados
+## 📈 Aprendizados
 
-- CREATE TABLE (Criar tabela)
-- PRIMARY KEY (Chave primária)
-- FOREIGN KEY (Chave estrangeira)
-- NOT NULL (Não nulo / obrigatório)
-- DEFAULT (Valor padrão)
-- JOIN (Junção de tabelas)
-- Data Integrity (Integridade de dados)
+* CREATE TABLE
+* PRIMARY KEY
+* FOREIGN KEY
+* NOT NULL
+* DEFAULT
+* JOIN
+* Integridade de dados
 
 ---
 
@@ -151,4 +123,5 @@ Representação das tabelas e seus relacionamentos (chaves estrangeiras).
 
 Desenvolvido por **A2D-Dev**
 
-Em transição para desenvolvimento com foco em soluções reais para o mercado imobiliário.
+Projeto de portfólio focado em evolução para desenvolvimento de sistemas reais.
+
