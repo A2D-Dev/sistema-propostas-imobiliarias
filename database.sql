@@ -1,3 +1,8 @@
+-- ========================================
+-- Sistema de Propostas Imobiliárias
+-- Autor: Anderson Dias (A2D Dev)
+-- Descrição: Estrutura de banco de dados
+-- ========================================
 -- =========================
 -- TABELA CLIENTE
 -- =========================
