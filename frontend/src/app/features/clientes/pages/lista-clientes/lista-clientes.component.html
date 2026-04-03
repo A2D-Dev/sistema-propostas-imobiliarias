@@ -1,0 +1,44 @@
+<div class="container">
+  <h2>Gestão de Clientes</h2>
+
+  <!-- CARREGANDO -->
+<div *ngIf="carregando" class="estado">
+  <img src="/mascote_carregando.png" class="mascote" />
+  <p>Carregando clientes...</p>
+</div>
+
+  <!-- ERRO -->
+<div *ngIf="erro" class="estado">
+  <img src="/mascote_erro.png" class="mascote" />
+  <p>Erro ao conectar com o servidor</p>
+</div>
+
+<!-- SEM DADOS -->
+<div *ngIf="!carregando && !erro && clientes.length === 0" class="estado">
+  <img src="/mascote_sem_dados.png" class="mascote" />
+  <p>Nenhum cliente cadastrado</p>
+</div>
+  <div class="actions">
+    <button class="btn btn-secondary" routerLink="/">Voltar</button>
+    <button class="btn btn-primary" routerLink="/clientes/novo">+ Novo Cliente</button>
+  </div>
+  <table *ngIf="!carregando && !erro && clientes.length > 0" class="tabela">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Documento</th>
+        <th>Tipo</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{ cliente.nome }}</td>
+        <td>{{ cliente.documento | documento }}</td>
+        <td>{{ cliente.tipoPessoa }}</td>
+        <td><button class="btn" routerLink="['/clientes/editar', cliente.id]">Editar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
