@@ -17,7 +17,7 @@ export const routes: Routes = [
         component: CadastroClienteComponent
     },
     {
-        path: 'clientes/editar/:id'
+        path: 'clientes/editar/:id',
         component: CadastroClienteComponent
     }
 
